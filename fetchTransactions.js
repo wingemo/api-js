@@ -16,8 +16,8 @@ function parseResponse(response) {
  */
 const fetchTransactions = async () => {
     try {
-        const accessToken = await makeRequest(config1);
-        const listTransactions = await makeRequest(config2);
+        const accessToken = await asyncHttpRequest(config1);
+        const listTransactions = await asyncHttpRequest(config2);
         return parseResponse(transactions);
     } catch (error) {
         console.error(error);
