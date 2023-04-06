@@ -3,7 +3,7 @@
  * the resulting object to the console.
  * @param {string} filepath - The path to the file containing the transaction data.
  */
-async function run(filepath) {
+async function dataProcessor() {
   try {
     const transactions = await fetchTransactions(filepath);
     const monthlyExpensesList = await monthlyExpensesList(transactions);
@@ -12,3 +12,5 @@ async function run(filepath) {
     console.error(error);
   }
 }
+
+dataProcessor();
