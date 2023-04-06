@@ -5,7 +5,7 @@
  */
 async function dataProcessor() {
   try {
-    const transactions = await fetchTransactions(filepath);
+    const transactions = await fetchTransactions();
     const monthlyExpensesList = await monthlyExpensesList(transactions);
     console.log(expensesByMonth);
   } catch (error) {
