@@ -6,7 +6,7 @@
 async function run(filepath) {
   try {
     const transactions = await fetchTransactions(filepath);
-    const expensesByMonth = parseMonthlyExpenses(transactions);
+    const monthlyExpensesList = await monthlyExpensesList(transactions);
     console.log(expensesByMonth);
   } catch (error) {
     console.error(error);
